@@ -11,7 +11,9 @@
 In one terminal:
 
 > rasa run actions --actions actions
-> In another terminal:
+
+In another terminal:
+
 > rasa shell
 
 #What does the chatbot do
