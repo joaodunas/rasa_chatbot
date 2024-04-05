@@ -12,8 +12,9 @@ messages = [{'role': 'system', 'content': 'I am a chatbot that can help you with
 def get_answer_ollama(user_input):
     messages.append({'role': 'user', 'content': user_input})
     response = ollama.chat(model='mistral', messages=messages)
+    response = response['message']['content']
     messages.append({'role': 'system', 'content': response})
-    return response['message']['content']
+    return response
 
 
 class simple_ollama_action(Action):
